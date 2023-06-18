@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Survey Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="content">
+    <header class="header">
+      <h1 id="title">Programmer Survey Form</h1>
+      <p id="description">Talk us about your programming journey</p>
+    </header>
+
+    <form id="survey-form">
+
+      <!--Name-->
+      <fieldset class="elements">
+        <label for="name" id="name-label">Name</label>
+        <input id="name" type="text" name="name" required placeholder="Insert your name"/>
+      </fieldset>
+
+      <!--Email-->
+      <fieldset class="elements">
+        <label for="email-label" id="email-label">Email</label>
+        <input id="email" type="email" required placeholder="Insert your email" />
+      </fieldset>
+
+      <!--Age-->
+      <fieldset class="elements">
+        <label for="number" id="number-label">Age</label>
+        <input id="number" type="number" min="18" max="100" required placeholder="Insert your age" />
+      </fieldset>
+
+      <!--Select Dropdown-->
+      <fieldset class="elements">
+        <label class="label-drop" for="dropdown">In which IT field you majorly work on?</label>
+        <select name="spec" id="dropdown">
+          <option style='color: gray;' disabled selected value>Select one</option>
+          <option value="1">Software applications development</option>
+          <option value="2">Web development</option>
+          <option value="3">Network administration</option>
+          <option value="4">Information security</option>
+          <option value="5">Data Science</option>
+          <option value="6">Computer systems</option>
+          <option value="7">Game development</option>
+          <option value="8">Internet of Things </option>
+          <option value="9">Machine Learning/Artificial Intelligence</option>
+          <option value="10">Mobile applications development</option>
+          </select>
+      </fieldset>
+
+      <!--Radio Buttons-->
+      <fieldset class="elements">
+        <legend>Years of programming experience:</legend>
+        <div style="margin-bottom: 5px;">
+          <input id="1y" name="years" type="radio" value="1y" required checked />
+          <label for="1y"> Less than a year</label>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <input id="3y" name="years" type="radio" value="3y"/>
+          <label for="3y"> 1 to 3 years</label>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <input id="5y" name="years" type="radio" value="5y">
+          <label for="5y">3 to 5 years</label>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <input id="10y" name="years" type="radio" value="10y">
+          <label for="10y">5 to 10 years</label>
+        </div>
+        <div style="margin-bottom: 5px;">
+          <input id="20y" name="years" type="radio" value="20y">
+          <label for="20y">10 to 20 years</label>
+        </div>
+        <div>
+          <input id="20+" name="years" type="radio" value="20+">
+          <label for="20+">20+ years</label>
+        </div>
+      </fieldset>
+
+      <!--Checkboxes-->
+      <fieldset class="elements">
+        <legend>What are the 3 programming languages you mostly use?</legend>
+
+        <div class="checkbox">
+          <label class=labcheck  for="javascript"><input type="checkbox" name="lang" id="javascript" value="javascript">Javascript</label>
+          <label  class=labcheck for="java"><input type="checkbox" name="java" id="java" value="java"/>Java</label>
+          <label class=labcheck for="c"><input type="checkbox" name="lang" id="c" value="c"/>C / C++</label>
+          <label class=labcheck for="python"><input type="checkbox" name="lang" id="python" value="python"/>Python</label>
+          <label class=labcheck for="C#"><input type="checkbox" name="lang" id="c#" value="c#"/> C#</label>
+          <label class=labcheck for="rust"><input type="checkbox" name="lang" id="rust" value="rust"/>Rust</label>
+        </div>
+        <div class="checkbox">
+          <label class=labcheck for="go"><input type="checkbox" name="lang" value="go" id="go">Go</label>
+          <label class=labcheck for="php"><input type="checkbox" name="lang" value="php" id="php"/>PHP</label>
+          <label class=labcheck for="ruby"><input type="checkbox" name="lang" value="ruby" id="ruby"/>Ruby</label>
+          <label class=labcheck for="swift"><input type="checkbox" name="lang" value="swift" id="swift">Swift</label>
+          <label class=labcheck for="sql"><input type="checkbox" name="lang" value="sql" id="sql">SQL</label>
+          <label class=labcheck for="others"><input type="checkbox" name="lang" value="others" id="others"/>Others</label>
+        </div>
+      </fieldset>
+
+      <!--Textarea-->
+      <fieldset class="elements">
+        <legend>What would be your best advice for a beginner programer:</legend>
+        <textarea id="advice" placeholder="Give your best advice..." maxlength="500" rows="4" cols="30" required></textarea>
+      </fieldset>
+
+      <!--Submit button-->
+      <fieldset class="elements">
+        <input type="submit"id="submit" value="Submit">
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
